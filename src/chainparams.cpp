@@ -155,9 +155,9 @@ public:
         vAlertPubKey = ParseHex("04c763d831cbd7e54df5a44fb549121582cb18474636e5ed5250461a9be5ee8b518e9707fc4e2058eea05cbc7d2ebdeef86bbc8c40702d9099f44fa321009bd502");
         nDefaultPort = 9811;
         nMinerThreads = 0;
-        nTargetTimespan = 24 * 60 * 60; // Mangaka: 1 day
-        nTargetSpacing = 50;  // Mangaka: 1 minute
-        nLastPOWBlock = 100;
+        nTargetTimespan = 50; // Mangaka: 1
+        nTargetSpacing = 50;  // Mangaka: 1
+        nLastPOWBlock = 40;
         nMaturity = 15;
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1525963591;
