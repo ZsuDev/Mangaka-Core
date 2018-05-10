@@ -84,8 +84,8 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 10 * 60; // Mangaka: 10 minute
         nTargetSpacing = 10 * 60;  // Mangaka: 10 minute
-        nLastPOWBlock = 100;
-        nMaturity = 100;
+        nLastPOWBlock = 50;
+        nMaturity = 10;
         nModifierUpdateBlock = 1;
         const char* pszTimestamp = "Magana Pro";
         CMutableTransaction txNew;
