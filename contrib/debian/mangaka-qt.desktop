@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Mangaka
+Comment=Mangaka P2P Cryptocurrency
+Comment[fr]=Mangaka, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Mangaka, eşten eşe kriptografik sanal para birimi
+Exec=mangaka-qt %u
+Terminal=false
+Type=Application
+Icon=mangaka128
+MimeType=x-scheme-handler/mangaka;
+Categories=Office;Finance;

@@ -1,0 +1,17 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="ca">locale/mangaka_ca.qm</file>
+        <file alias="da">locale/mangaka_da.qm</file>
+        <file alias="de">locale/mangaka_de.qm</file>
+        <file alias="en">locale/mangaka_en.qm</file>
+        <file alias="en_US">locale/mangaka_en_US.qm</file>
+        <file alias="es">locale/mangaka_es.qm</file>
+        <file alias="fr_FR">locale/mangaka_fr_FR.qm</file>
+        <file alias="it">locale/mangaka_it.qm</file>
+        <file alias="ja">locale/mangaka_ja.qm</file>
+        <file alias="pt">locale/mangaka_pt.qm</file>
+        <file alias="ro_RO">locale/mangaka_ro_RO.qm</file>
+        <file alias="ru">locale/mangaka_ru.qm</file>
+        <file alias="zh_TW">locale/mangaka_zh_TW.qm</file>
+    </qresource>
+</RCC>
