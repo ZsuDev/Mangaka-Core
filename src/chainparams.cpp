@@ -82,10 +82,10 @@ public:
         nSubsidyHalvingInterval = 210000;
         nMaxReorganizationDepth = 100;
         nMinerThreads = 0;
-        nTargetTimespan = 10 * 60; // Mangaka: 10 minute
-        nTargetSpacing = 10 * 60;  // Mangaka: 10 minute
+        nTargetTimespan = 1 * 60; // Mangaka: 10 minute
+        nTargetSpacing = 1 * 60;  // Mangaka: 10 minute
         nLastPOWBlock = 50;
-        nMaturity = 10;
+        nMaturity = 50;
         nModifierUpdateBlock = 1;
         const char* pszTimestamp = "Magana Pro";
         CMutableTransaction txNew;
@@ -109,9 +109,9 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 23);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13);
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 212);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 52);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 59);
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 18);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x02)(0x2D)(0x25)(0x33).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x02)(0x21)(0x31)(0x2B).convert_to_container<std::vector<unsigned char> >();
         //  BIP44 coin type is 'TBD'
