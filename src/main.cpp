@@ -1625,14 +1625,13 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
             return 0;
     }
 
-	if (nHeight == 0)
-		return 0;
-
-    if (nHeight <= Params().LAST_POW_BLOCK()) {
-        ret = (blockValue / 100) * 60;
+	  if (nHeight < 500)
+		  return 0;
+    } else if (nHeight <= Params().LAST_POW_BLOCK()) {
+      ret = (blockValue / 100) * 60;
     } else if (nHeight > Params().LAST_POW_BLOCK()) {
-        int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;
-        int64_t mNodeCoins = mnodeman.size() * 1000 * COIN;
+      int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;
+      int64_t mNodeCoins = mnodeman.size() * 1000 * COIN;
 
         //if a mn count is inserted into the function we are looking for a specific result for a masternode count
         if(nMasternodeCount)
