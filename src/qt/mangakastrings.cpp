@@ -203,10 +203,11 @@ QT_TRANSLATE_NOOP("mangaka-core", ""
 QT_TRANSLATE_NOOP("mangaka-core", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("mangaka-core", "( could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("mangaka-core", "(9711 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("mangaka-core", "(default: %s)"),
 QT_TRANSLATE_NOOP("mangaka-core", "(default: 1)"),
-QT_TRANSLATE_NOOP("mangaka-core", "(must be  for mainnet)"),
+QT_TRANSLATE_NOOP("mangaka-core", "(must be 9711 for mainnet)"),
+
 QT_TRANSLATE_NOOP("mangaka-core", "<category> can be:\n"),
 QT_TRANSLATE_NOOP("mangaka-core", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("mangaka-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),
