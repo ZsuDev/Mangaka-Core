@@ -79,12 +79,12 @@ public:
         vAlertPubKey = ParseHex("04dfc4b53f6b02b4709808167bc48644e94e5bb9470c394e1292530ba7135976a9ceabfe2310323e0fd7737e3cd48e7420e059ba8f8af26f6805ab97b43e242231");
         nDefaultPort = 9711;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // Mangaka starting difficulty is 1 / 2^12
-        nSubsidyHalvingInterval = 210000;
+        nSubsidyHalvingInterval = 52560;
         nMaxReorganizationDepth = 100;
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 60; // Mangaka: 10 minute
-        nTargetSpacing = 1 * 60;  // Mangaka: 10 minute
-        nLastPOWBlock = 50;
+        nTargetTimespan = 10 * 60; // Mangaka: 10 minute
+        nTargetSpacing = 10 * 60;  // Mangaka: 10 minute
+        nLastPOWBlock = 52560;
         nMaturity = 50;
         nModifierUpdateBlock = 1;
         const char* pszTimestamp = "Magana Pro";
@@ -128,9 +128,8 @@ public:
         fHeadersFirstSyncingActive = false;
         nPoolMaxTransactions = 3;
         strSporkKey = "040d26da6e5abcffa92b3422264ec530305bcc56c07b031e14e4700890a7ad7e10d7f08c3089a8a7a40f456144d4a6996c3588592cf74b802b3f894f54a6ef8916";
-
         strObfuscationPoolDummyAddress = "AWSbBnzmNkjDVaYHX7vkL1MqD96pRYWtZo";
-        nStartMasternodePayments = 1525982400; //Wed, 25 Jun 2014 20:36:16 GMT
+        nStartMasternodePayments = 1526241600; //05/13/2018 @ 8:00pm (UTC)
     }
     const Checkpoints::CCheckpointData& Checkpoints() const
     {
