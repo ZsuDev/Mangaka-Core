@@ -5338,8 +5338,10 @@ for example: alertnotify=echo %%s | mail -s &quot;Mangaka Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
+
         <source>(9711 could be used only on mainnet)</source>
         <translation type="unfinished">(9711 could be used only on mainnet)</translation>
+
     </message>
     <message>
         <location line="+1"/>

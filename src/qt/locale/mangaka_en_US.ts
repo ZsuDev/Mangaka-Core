@@ -4192,6 +4192,7 @@ for example: alertnotify=echo %%s | mail -s "Mangaka Alert" admin@foo.com
     <message>
         <source>(must be 9711 for mainnet)</source>
         <translation>(must be 9711 for mainnet)</translation>
+
     </message>
     <message>
         <source>&lt;category&gt; can be:
