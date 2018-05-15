@@ -131,7 +131,7 @@ public:
         nPoolMaxTransactions = 3;
         strSporkKey = "040d26da6e5abcffa92b3422264ec530305bcc56c07b031e14e4700890a7ad7e10d7f08c3089a8a7a40f456144d4a6996c3588592cf74b802b3f894f54a6ef8916";
         strObfuscationPoolDummyAddress = "AWSbBnzmNkjDVaYHX7vkL1MqD96pRYWtZo";
-        nStartMasternodePayments = 1526241600; //05/13/2018 @ 8:00pm (UTC)
+        nStartMasternodePayments = 1526500800; //05/13/2018 @ 8:00pm (UTC)
     }
     const Checkpoints::CCheckpointData& Checkpoints() const
     {
