@@ -1,6 +1,7 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
+// Copyright (c) 2015-2017 The PIVX developers
 // Copyright (c) 2015-2017 The Mangaka developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -93,7 +94,7 @@ static inline int64_t roundint64(double d)
 CAmount AmountFromValue(const Value& value)
 {
     double dAmount = value.get_real();
-    if (dAmount <= 0.0 || dAmount > 100000000.0)
+    if (dAmount <= 0.0 || dAmount > 21000000.0)
         throw JSONRPCError(RPC_TYPE_ERROR, "Invalid amount");
     CAmount nAmount = roundint64(dAmount * COIN);
     if (!MoneyRange(nAmount))
@@ -133,6 +134,24 @@ vector<unsigned char> ParseHexV(const Value& v, string strName)
 vector<unsigned char> ParseHexO(const Object& o, string strKey)
 {
     return ParseHexV(find_value(o, strKey), strKey);
+}
+
+int ParseInt(const Object& o, string strKey)
+{
+    const Value& v = find_value(o, strKey);
+    if (v.type() != int_type)
+        throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, " + strKey + "is not an int");
+
+    return v.get_int();
+}
+
+bool ParseBool(const Object& o, string strKey)
+{
+    const Value& v = find_value(o, strKey);
+    if (v.type() != bool_type)
+        throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, " + strKey + "is not a bool");
+
+    return v.get_bool();
 }
 
 
@@ -263,6 +282,7 @@ static const CRPCCommand vRPCCommands[] =
         {"blockchain", "verifychain", &verifychain, true, false, false},
         {"blockchain", "invalidateblock", &invalidateblock, true, true, false},
         {"blockchain", "reconsiderblock", &reconsiderblock, true, true, false},
+        {"getinvalid", "getinvalid", &getinvalid, true, true, false},
 
         /* Mining */
         {"mining", "getblocktemplate", &getblocktemplate, true, false, false},
@@ -301,12 +321,32 @@ static const CRPCCommand vRPCCommands[] =
 
         /* Mangaka features */
         {"mangaka", "masternode", &masternode, true, true, false},
-        {"mangaka", "masternodelist", &masternodelist, true, true, false},
+        {"mangaka", "listmasternodes", &listmasternodes, true, true, false},
+        {"mangaka", "getmasternodecount", &getmasternodecount, true, true, false},
+        {"mangaka", "masternodeconnect", &masternodeconnect, true, true, false},
+        {"mangaka", "masternodecurrent", &masternodecurrent, true, true, false},
+        {"mangaka", "masternodedebug", &masternodedebug, true, true, false},
+        {"mangaka", "startmasternode", &startmasternode, true, true, false},
+        {"mangaka", "createmasternodekey", &createmasternodekey, true, true, false},
+        {"mangaka", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
+        {"mangaka", "listmasternodeconf", &listmasternodeconf, true, true, false},
+        {"mangaka", "getmasternodestatus", &getmasternodestatus, true, true, false},
+        {"mangaka", "getmasternodewinners", &getmasternodewinners, true, true, false},
+        {"mangaka", "getmasternodescores", &getmasternodescores, true, true, false},
         {"mangaka", "mnbudget", &mnbudget, true, true, false},
-        {"mangaka", "mnbudgetvoteraw", &mnbudgetvoteraw, true, true, false},
+        {"mangaka", "preparebudget", &preparebudget, true, true, false},
+        {"mangaka", "submitbudget", &submitbudget, true, true, false},
+        {"mangaka", "mnbudgetvote", &mnbudgetvote, true, true, false},
+        {"mangaka", "getbudgetvotes", &getbudgetvotes, true, true, false},
+        {"mangaka", "getnextsuperblock", &getnextsuperblock, true, true, false},
+        {"mangaka", "getbudgetprojection", &getbudgetprojection, true, true, false},
+        {"mangaka", "getbudgetinfo", &getbudgetinfo, true, true, false},
+        {"mangaka", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
         {"mangaka", "mnfinalbudget", &mnfinalbudget, true, true, false},
+        {"mangaka", "checkbudgets", &checkbudgets, true, true, false},
         {"mangaka", "mnsync", &mnsync, true, true, false},
         {"mangaka", "spork", &spork, true, true, false},
+        {"mangaka", "getpoolinfo", &getpoolinfo, true, true, false},
 #ifdef ENABLE_WALLET
         {"mangaka", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
 
@@ -358,6 +398,20 @@ static const CRPCCommand vRPCCommands[] =
         {"wallet", "walletlock", &walletlock, true, false, true},
         {"wallet", "walletpassphrasechange", &walletpassphrasechange, true, false, true},
         {"wallet", "walletpassphrase", &walletpassphrase, true, false, true},
+
+        {"zerocoin", "getzerocoinbalance", &getzerocoinbalance, false, false, true},
+        {"zerocoin", "listmintedzerocoins", &listmintedzerocoins, false, false, true},
+        {"zerocoin", "listspentzerocoins", &listspentzerocoins, false, false, true},
+        {"zerocoin", "listzerocoinamounts", &listzerocoinamounts, false, false, true},
+        {"zerocoin", "mintzerocoin", &mintzerocoin, false, false, true},
+        {"zerocoin", "spendzerocoin", &spendzerocoin, false, false, true},
+        {"zerocoin", "resetmintzerocoin", &resetmintzerocoin, false, false, true},
+        {"zerocoin", "resetspentzerocoin", &resetspentzerocoin, false, false, true},
+        {"zerocoin", "getarchivedzerocoin", &getarchivedzerocoin, false, false, true},
+        {"zerocoin", "importzerocoins", &importzerocoins, false, false, true},
+        {"zerocoin", "exportzerocoins", &exportzerocoins, false, false, true},
+        {"zerocoin", "reconsiderzerocoins", &reconsiderzerocoins, false, false, true}
+
 #endif // ENABLE_WALLET
 };
 
@@ -1040,7 +1094,7 @@ std::string HelpExampleRpc(string methodname, string args)
 {
     return "> curl --user myusername --data-binary '{\"jsonrpc\": \"1.0\", \"id\":\"curltest\", "
            "\"method\": \"" +
-           methodname + "\", \"params\": [" + args + "] }' -H 'content-type: text/plain;' http://127.0.0.1:61020/\n";
+           methodname + "\", \"params\": [" + args + "] }' -H 'content-type: text/plain;' http://127.0.0.1:51473/\n";
 }
 
 const CRPCTable tableRPC;

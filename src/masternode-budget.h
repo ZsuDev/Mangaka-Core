@@ -1,8 +1,9 @@
 // Copyright (c) 2014-2015 The Dash developers
+// Copyright (c) 2015-2017 The PIVX developers
 // Copyright (c) 2015-2017 The Mangaka developers
-
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
 #ifndef MASTERNODE_BUDGET_H
 #define MASTERNODE_BUDGET_H
 
@@ -31,9 +32,8 @@ class CTxBudgetPayment;
 #define VOTE_YES 1
 #define VOTE_NO 2
 
-static const CAmount PROPOSAL_FEE_TX = (50 * COIN);
-static const CAmount BUDGET_FEE_TX = (50 * COIN);
-static const int64_t BUDGET_FEE_CONFIRMATIONS = 6;
+static const CAmount PROPOSAL_FEE_TX = (5 * COIN);
+static const CAmount BUDGET_FEE_TX = (5 * COIN);
 static const int64_t BUDGET_VOTE_UPDATE_MIN = 60 * 60;
 
 extern std::vector<CBudgetProposalBroadcast> vecImmatureBudgetProposals;
@@ -230,7 +230,6 @@ public:
     bool AddProposal(CBudgetProposal& budgetProposal);
     bool AddFinalizedBudget(CFinalizedBudget& finalizedBudget);
     void SubmitFinalBudget();
-    bool HasNextFinalizedBudget();
 
     bool UpdateProposal(CBudgetVote& vote, CNode* pfrom, std::string& strError);
     bool UpdateFinalizedBudget(CFinalizedBudgetVote& vote, CNode* pfrom, std::string& strError);
@@ -490,10 +489,10 @@ public:
 
     bool IsEstablished()
     {
-        //Proposals must be at least a day old to make it into a budget
+        // Proposals must be at least a day old to make it into a budget
         if (Params().NetworkID() == CBaseChainParams::MAIN) return (nTime < GetTime() - (60 * 60 * 24));
 
-        //for testing purposes - 4 hours
+        // For testing purposes - 5 minutes
         return (nTime < GetTime() - (60 * 5));
     }
 

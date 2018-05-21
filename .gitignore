@@ -1,3 +1,4 @@
+.gitignore
 *.sublime-project
 *.sublime-workspace
 todo.txt
@@ -12,7 +13,6 @@ src/mangaka-cli
 src/mangaka-tx
 src/test/test_mangaka
 src/qt/test/test_mangaka-qt
-src/bench/bench_mangaka
 
 # autoreconf
 Makefile.in
@@ -34,12 +34,16 @@ build-aux/test-driver
 config.log
 config.status
 configure
+confdefs.h
+conftest.cpp
+conftest.err
 libtool
 src/config/mangaka-config.h
 src/config/mangaka-config.h.in
 src/config/stamp-h1
 share/setup.nsi
 share/qt/Info.plist
+contrib/devtools/split-debug.sh
 
 src/univalue/gen
 
@@ -48,7 +52,6 @@ src/qt/moc_*.cpp
 src/qt/forms/ui_*.h
 
 src/qt/test/moc*.cpp
-libconftest.dylib*
 
 .deps
 .dirstamp
@@ -61,7 +64,6 @@ libconftest.dylib*
 *.pyc
 *.o
 *.o-*
-#*.patch
 .mangaka
 *.a
 *.pb.cc
@@ -82,7 +84,7 @@ libconftest.dylib*
 *.qm
 Makefile
 mangaka-qt
-Dash-Qt.app
+Mangaka-Qt.app
 
 # Unit-tests
 Makefile.test
@@ -92,13 +94,15 @@ src/test/buildenv.py
 # Resources cpp
 qrc_*.cpp
 
+# Qt creator
+*.pro.user
+
 # Mac specific
 .DS_Store
 build
 
 #lcov
 *.gcno
-*.gcda
 /*.info
 test_mangaka.coverage/
 total.coverage/
@@ -109,27 +113,18 @@ linux-coverage-build
 linux-build
 win32-build
 qa/pull-tester/run-bitcoind-for-test.sh
-qa/pull-tester/tests_config.py
+qa/pull-tester/tests-config.sh
 qa/pull-tester/cache/*
 qa/pull-tester/test.*/*
-qa/tmp
-cache/
-share/BitcoindComparisonTool.jar
 
 !src/leveldb*/Makefile
-!depends/Makefile
 
 .cproject
 .project
-.autotools
 /doc/doxygen/
+/nbproject/
 
-libmangakaconsensus.pc
-src/qt/mangaka-qt.bash
-qa/pull-tester/tests-config.sh
-
-#development symlinks
-mangaka-cli
-mangakad
-mangaka-qt
-make
+.idea
+CMakeLists.txt
+cmake-build-debug
+/.vs

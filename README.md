@@ -1,59 +1,71 @@
-### Usage
+<h2><strong>Mangaka Staging Repository (Version 4.6.0)</strong></h2>
+<p>More information at mangaka.com Visit our ANN thread at https://bitcointalk.org/index.php?topic=1152947.0</p>
+<h3><strong>Coin specs:</strong></h3>
+<p><strong><span style="color: #800080;"><em>Algo:</em></span></strong></p>
+<ul>
+<li>Xevan</li>
+</ul>
+<p><strong><span style="color: #800080;"><em>PoW Block Reward:</em></span></strong></p>
+<ul>
+<li>[block# 2-43200] 20% MN (1.5 AMS) / 80% MINER (6 AMS) [block# 43201-151200] 20% MN (1.5 AMS) / 70% MINER (5.25 AMS) / 10% Available to the budget system (0.75 AMS) [block# 151201-259200] 45% MN (2.25 AMS) / 45% MINER (2.25 AMS) / 10% Available to the budget system (0.5 AMS)</li>
+</ul>
+<p><strong><span style="color: #800080;"><em>PoS Block Reward:</em></span></strong></p>
+<ul>
+<li>[block# 259201-Infinite] Variable based on SeeSaw Reward Mechanism</li>
+</ul>
+<p><strong><span style="color: #800080;"><em>Block Time:</em></span></strong></p>
+<ul>
+<li>60 Seconds with Retargeting every Block</li>
+</ul>
+<p><strong><span style="color: #800080;"><em>Max Coin Supply:</em></span></strong></p>
+<ul>
+<li>PoW Phase: 1,673,987.5</li>
+</ul>
+<p><strong><span style="color: #800080;"><em>Max Coin Supply:</em></span></strong></p>
+<ul>
+<li>PoS Phase: Infinte</li>
+</ul>
+<p><strong><span style="color: #800080;"><em>PoW Phase 1:</em></span></strong></p>
+<ul>
+<li>[block# 1] 80000000 Premine to support the swap.</li>
+</ul>
+<p><strong><span style="color: #800080;"><em>PoW Phase 2:</em></span></strong></p>
+<ul>
+<li>[block#&rsquo;s 2-259200] Approx 180 Days</li>
+</ul>
+<p><strong><span style="color: #800080;"><em>PoW Rewards Breakdown:</em></span></strong></p>
+<ul>
+<li>[block&rsquo;s &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2-43200] 20% MN (1.5 AMS) &nbsp; &nbsp;/ 80% MINER (6 AMS)</li>
+<li>[block&rsquo;s &nbsp; 43201-151200] 20% MN (1.5 AMS) &nbsp; &nbsp;/ 70% MINER (5.25 AMS) &nbsp;/ 10% Available to the budget system (0.75 AMS)</li>
+<li>[block&rsquo;s 151201-259200] 45% MN (2.25 AMS) / 45% MINER (2.25 AMS) / 10% Available to the budget system ( &nbsp;0.5 AMS)</li>
+</ul>
+<p><strong><span style="color: #800080;"><em>PoS Rewards Breakdown:</em></span></strong></p>
+<ul>
+<li>PoS Phase 1: [blocks 259201-302399] 4.75 AMS (50% staker 50% masternode)</li>
+<li>PoS Phase 2: [blocks 302400-345599] 4.5 AMS (50% staker 50% masternode)</li>
+<li>PoS Phase 3: [blocks 345600-388799] 4.25 AMS (50% staker 50% masternode)</li>
+<li>PoS Phase 4: [blocks 388800-431999] 4 AMS (50% staker 50% masternode)</li>
+<li>PoS Phase 5: [blocks 432000-475199] 3.75 AMS (50% staker 50% masternode)</li>
+<li>PoS Phase 6: [blocks 475200-518399] 3.5 AMS (50% staker 50% masternode)</li>
+<li>PoS Phase 7: [blocks 518400-561599] 3.25 AMS (50% staker 50% masternode)</li>
+<li>PoS Phase 8: [blocks 561600-604799] 3 AMS (50% staker 50% masternode)</li>
+<li>PoS Phase 9: [blocks 604800-647999] 2.25 AMS (50% staker 50% masternode)</li>
+<li>PoS Phase X: [blocks 648000-Infinite] &nbsp; 2 AMS (50% staker 50% masternode)</li>
+</ul>
+<br/>
+<p>&nbsp;</p>
+<p>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p>&nbsp;</p>
+<p>Mangaka is a cutting edge cryptocurrency, with many features not available in most other cryptocurrencies.</p>
+<p>Anonymized transactions using coin mixing technology, we call it <em>Obfuscation</em>.</p>
+<p>Fast transactions featuring guaranteed zero confirmation transactions, we call it <em>SwiftTX</em>.</p>
+<p>Decentralized blockchain voting providing for consensus based advancement of the current Masternode technology used to secure the network and provide the above features, each Masternode is secured with collateral of 100K AMS</p>
 
-To build dependencies for the current arch+OS:
-
-    make
-
-To build for another arch/OS:
-
-    make HOST=host-platform-triplet
-
-For example:
-
-    make HOST=x86_64-w64-mingw32 -j4
-
-A prefix will be generated that's suitable for plugging into Bitcoin's
-configure. In the above example, a dir named x86_64-w64-mingw32 will be
-created. To use it for Bitcoin:
-
-    ./configure --prefix=`pwd`/depends/x86_64-w64-mingw32
-
-Common `host-platform-triplets` for cross compilation are:
-
-- `i686-w64-mingw32` for Win32
-- `x86_64-w64-mingw32` for Win64
-- `x86_64-apple-darwin11` for MacOSX
-- `arm-linux-gnueabihf` for Linux ARM 32 bit
-- `aarch64-linux-gnu` for Linux ARM 64 bit
-
-No other options are needed, the paths are automatically configured.
-
-Dependency Options:
-The following can be set when running make: make FOO=bar
-
-    SOURCES_PATH: downloaded sources will be placed here
-    BASE_CACHE: built packages will be placed here
-    SDK_PATH: Path where sdk's can be found (used by OSX)
-    FALLBACK_DOWNLOAD_PATH: If a source file can't be fetched, try here before giving up
-    NO_QT: Don't download/build/cache qt and its dependencies
-    NO_WALLET: Don't download/build/cache libs needed to enable the wallet
-    NO_UPNP: Don't download/build/cache packages needed for enabling upnp
-    DEBUG: disable some optimizations and enable more runtime checking
-    HOST_ID_SALT: Optional salt to use when generating host package ids
-    BUILD_ID_SALT: Optional salt to use when generating build package ids
-
-If some packages are not built, for example `make NO_WALLET=1`, the appropriate
-options will be passed to bitcoin's configure. In this case, `--disable-wallet`.
-
-Additional targets:
-
-    download: run 'make download' to fetch all sources without building them
-    download-osx: run 'make download-osx' to fetch all sources needed for osx builds
-    download-win: run 'make download-win' to fetch all sources needed for win builds
-    download-linux: run 'make download-linux' to fetch all sources needed for linux builds
-
-### Other documentation
-
-- [description.md](description.md): General description of the depends system
-- [packages.md](packages.md): Steps for adding packages
-
+<h2>Live blockchain statistics</h2>
+    <img src="https://stats.mangaka.com/Stats/ConnectionCount" alt="Connection count" /><br />
+    <img src="https://stats.mangaka.com/Stats/MasternodeCount" alt="Masternode count"/><br/>
+    <img src="https://stats.mangaka.com/Stats/BlockCount" alt="Block count"/><br/>
+    <img src="https://stats.mangaka.com/Stats/LastBlock" alt="Last block"/><br/>
+    <img src="https://stats.mangaka.com/Stats/TotalSupply" alt="Total supply"/><br/>
+    <img src="https://stats.mangaka.com/Stats/PowDifficulty" alt="PoW difficulty"/><br/>
+    <img src="https://stats.mangaka.com/Stats/NetworkHashRate" alt="Network hashrate" /><br />

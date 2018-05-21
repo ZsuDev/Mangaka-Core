@@ -7,7 +7,7 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/mangakacoin/mangakacoin-detached-sigs.git"
+- "url": "https://github.com/mangakacoin/Mangaka-Core-detached-sigs.git"
   "dir": "signature"
 files:
 - "mangaka-osx-unsigned.tar.gz"

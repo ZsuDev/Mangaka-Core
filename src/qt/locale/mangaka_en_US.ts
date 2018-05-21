@@ -176,16 +176,16 @@
         <translation>Confirm wallet encryption</translation>
     </message>
     <message>
-        <source>Mangaka will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your MANGs from being stolen by malware infecting your computer.</source>
-        <translation>Mangaka will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your MANGs from being stolen by malware infecting your computer.</translation>
+        <source>Mangaka will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AMSs from being stolen by malware infecting your computer.</source>
+        <translation>Mangaka will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AMSs from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Are you sure you wish to encrypt your wallet?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MANG&lt;/b&gt;!</source>
-        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MANG&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AMS&lt;/b&gt;!</source>
+        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AMS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -1208,12 +1208,16 @@ Address: %4
         <translation>command-line options</translation>
     </message>
     <message>
-        <source>UI options</source>
-        <translation>UI options</translation>
+        <source>UI Options:</source>
+        <translation>UI Options:</translation>
     </message>
     <message>
-        <source>Choose data directory on startup (default: 0)</source>
-        <translation>Choose data directory on startup (default: 0)</translation>
+        <source>Choose data directory on startup (default: %u)</source>
+        <translation>Choose data directory on startup (default: %u)</translation>
+    </message>
+    <message>
+        <source>Show splash screen on startup (default: %u)</source>
+        <translation>Show splash screen on startup (default: %u)</translation>
     </message>
     <message>
         <source>Set language, for example "de_DE" (default: system locale)</source>
@@ -1226,10 +1230,6 @@ Address: %4
     <message>
         <source>Set SSL root certificates for payment request (default: -system-)</source>
         <translation>Set SSL root certificates for payment request (default: -system-)</translation>
-    </message>
-    <message>
-        <source>Show splash screen on startup (default: 1)</source>
-        <translation>Show splash screen on startup (default: 1)</translation>
     </message>
 </context>
 <context>
@@ -1344,22 +1344,6 @@ Address: %4
     <message>
         <source>0</source>
         <translation>0</translation>
-    </message>
-    <message>
-        <source>All Masternodes</source>
-        <translation>All Masternodes</translation>
-    </message>
-    <message>
-        <source>Filter List:</source>
-        <translation>Filter List:</translation>
-    </message>
-    <message>
-        <source>Filter masternode list</source>
-        <translation>Filter masternode list</translation>
-    </message>
-    <message>
-        <source>Node Count:</source>
-        <translation>Node Count:</translation>
     </message>
     <message>
         <source>Start alias</source>
@@ -1560,32 +1544,32 @@ Please check the address and try again.</translation>
         <translation>Please select a privacy level.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 MANG</source>
-        <translation>Use 2 separate masternodes to mix funds up to 10000 MANG</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 AMS</source>
+        <translation>Use 2 separate masternodes to mix funds up to 10000 AMS</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 MANG</source>
-        <translation>Use 8 separate masternodes to mix funds up to 10000 MANG</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 AMS</source>
+        <translation>Use 8 separate masternodes to mix funds up to 10000 AMS</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Use 16 separate masternodes</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 MANG to anonymize 10000 MANG</source>
-        <translation>This option is the quickest and will cost about ~0.025 MANG to anonymize 10000 MANG</translation>
+        <source>This option is the quickest and will cost about ~0.025 AMS to anonymize 10000 AMS</source>
+        <translation>This option is the quickest and will cost about ~0.025 AMS to anonymize 10000 AMS</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 MANG to anonymize 10000 MANG</source>
-        <translation>This option is moderately fast and will cost about 0.05 MANG to anonymize 10000 MANG</translation>
+        <source>This option is moderately fast and will cost about 0.05 AMS to anonymize 10000 AMS</source>
+        <translation>This option is moderately fast and will cost about 0.05 AMS to anonymize 10000 AMS</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>This is the slowest and most secure option. Using maximum anonymity will cost</translation>
     </message>
     <message>
-        <source>0.1 MANG per 10000 MANG you anonymize.</source>
-        <translation>0.1 MANG per 10000 MANG you anonymize.</translation>
+        <source>0.1 AMS per 10000 AMS you anonymize.</source>
+        <translation>0.1 AMS per 10000 AMS you anonymize.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1735,9 +1719,9 @@ Please check the address and try again.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/mangaka-project/mangaka-project-translations</source>
+https://www.transifex.com/mangakacoin/Mangaka-Core-project-translations</source>
         <translation>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/mangaka-project/mangaka-project-translations</translation>
+https://www.transifex.com/mangakacoin/Mangaka-Core-project-translations</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1943,8 +1927,8 @@ https://www.transifex.com/mangaka-project/mangaka-project-translations</translat
         <translation>Obfuscation Balance:</translation>
     </message>
     <message>
-        <source>0 MANG / 0 Rounds</source>
-        <translation>0 MANG / 0 Rounds</translation>
+        <source>0 AMS / 0 Rounds</source>
+        <translation>0 AMS / 0 Rounds</translation>
     </message>
     <message>
         <source>Enabled/Disabled</source>
@@ -2432,64 +2416,64 @@ https://www.transifex.com/mangaka-project/mangaka-project-translations</translat
         <translation>&amp;Wallet Repair</translation>
     </message>
     <message>
+        <source>Wallet In Use:</source>
+        <translation>Wallet In Use:</translation>
+    </message>
+    <message>
         <source>Salvage wallet</source>
         <translation>Salvage wallet</translation>
+    </message>
+    <message>
+        <source>Attempt to recover private keys from a corrupt wallet.dat.</source>
+        <translation>Attempt to recover private keys from a corrupt wallet.dat.</translation>
     </message>
     <message>
         <source>Rescan blockchain files</source>
         <translation>Rescan blockchain files</translation>
     </message>
     <message>
+        <source>Rescan the block chain for missing wallet transactions.</source>
+        <translation>Rescan the block chain for missing wallet transactions.</translation>
+    </message>
+    <message>
         <source>Recover transactions 1</source>
         <translation>Recover transactions 1</translation>
+    </message>
+    <message>
+        <source>Recover transactions from blockchain (keep meta-data, e.g. account owner).</source>
+        <translation>Recover transactions from blockchain (keep meta-data, e.g. account owner).</translation>
     </message>
     <message>
         <source>Recover transactions 2</source>
         <translation>Recover transactions 2</translation>
     </message>
     <message>
+        <source>Recover transactions from blockchain (drop meta-data).</source>
+        <translation>Recover transactions from blockchain (drop meta-data).</translation>
+    </message>
+    <message>
         <source>Upgrade wallet format</source>
         <translation>Upgrade wallet format</translation>
+    </message>
+    <message>
+        <source>Rebuild block chain index from current blk000??.dat files.</source>
+        <translation>Rebuild block chain index from current blk000??.dat files.</translation>
     </message>
     <message>
         <source>The buttons below will restart the wallet with command-line options to repair the wallet, fix issues with corrupt blockhain files or missing/obsolete transactions.</source>
         <translation>The buttons below will restart the wallet with command-line options to repair the wallet, fix issues with corrupt blockhain files or missing/obsolete transactions.</translation>
     </message>
     <message>
-        <source>-salvagewallet: Attempt to recover private keys from a corrupt wallet.dat.</source>
-        <translation>-salvagewallet: Attempt to recover private keys from a corrupt wallet.dat.</translation>
-    </message>
-    <message>
-        <source>-rescan: Rescan the block chain for missing wallet transactions.</source>
-        <translation>-rescan: Rescan the block chain for missing wallet transactions.</translation>
-    </message>
-    <message>
-        <source>-zapwallettxes=1: Recover transactions from blockchain (keep meta-data, e.g. account owner).</source>
-        <translation>-zapwallettxes=1: Recover transactions from blockchain (keep meta-data, e.g. account owner).</translation>
-    </message>
-    <message>
-        <source>-zapwallettxes=2: Recover transactions from blockchain (drop meta-data).</source>
-        <translation>-zapwallettxes=2: Recover transactions from blockchain (drop meta-data).</translation>
-    </message>
-    <message>
-        <source>-upgradewallet: Upgrade wallet to latest format on startup. (Note: this is NOT an update of the wallet itself!)</source>
-        <translation>-upgradewallet: Upgrade wallet to latest format on startup. (Note: this is NOT an update of the wallet itself!)</translation>
-    </message>
-    <message>
         <source>Wallet repair options.</source>
         <translation>Wallet repair options.</translation>
     </message>
     <message>
+        <source>Upgrade wallet to latest format on startup. (Note: this is NOT an update of the wallet itself!)</source>
+        <translation>Upgrade wallet to latest format on startup. (Note: this is NOT an update of the wallet itself!)</translation>
+    </message>
+    <message>
         <source>Rebuild index</source>
         <translation>Rebuild index</translation>
-    </message>
-    <message>
-        <source>-reindex: Rebuild block chain index from current blk000??.dat files.</source>
-        <translation>-reindex: Rebuild block chain index from current blk000??.dat files.</translation>
-    </message>
-    <message>
-        <source>Wallet Path</source>
-        <translation>Wallet Path</translation>
     </message>
     <message>
         <source>In:</source>
@@ -2502,10 +2486,6 @@ https://www.transifex.com/mangaka-project/mangaka-project-translations</translat
     <message>
         <source>Welcome to the Mangaka RPC console.</source>
         <translation>Welcome to the Mangaka RPC console.</translation>
-    </message>
-    <message>
-        <source>Wallet in use: </source>
-        <translation>Wallet in use: </translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -2812,8 +2792,8 @@ https://www.transifex.com/mangaka-project/mangaka-project-translations</translat
         <translation>UTXO Size:</translation>
     </message>
     <message>
-        <source>0 MANG</source>
-        <translation>0 MANG</translation>
+        <source>0 AMS</source>
+        <translation>0 AMS</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2860,12 +2840,12 @@ https://www.transifex.com/mangaka-project/mangaka-project-translations</translat
         <translation>Confirmation time:</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uMANGs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uMANGs in fee,&lt;br /&gt;while "at least" pays 1000 uMANGs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>If the custom fee is set to 1000 uMANGs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uMANGs in fee,&lt;br /&gt;while "at least" pays 1000 uMANGs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uAMSs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uAMSs in fee,&lt;br /&gt;while "at least" pays 1000 uAMSs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>If the custom fee is set to 1000 uAMSs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uAMSs in fee,&lt;br /&gt;while "at least" pays 1000 uAMSs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uMANGs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uMANGs in fee,&lt;br /&gt;while "total at least" pays 1000 uMANGs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>If the custom fee is set to 1000 uMANGs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uMANGs in fee,&lt;br /&gt;while "total at least" pays 1000 uMANGs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uAMSs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uAMSs in fee,&lt;br /&gt;while "total at least" pays 1000 uAMSs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>If the custom fee is set to 1000 uAMSs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uAMSs in fee,&lt;br /&gt;while "total at least" pays 1000 uAMSs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Mangaka transactions than the network can process.</source>
@@ -3860,8 +3840,8 @@ https://www.transifex.com/mangaka-project/mangaka-project-translations</translat
         <translation>Send Coins</translation>
     </message>
     <message>
-        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 MANG.</source>
-        <translation>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 MANG.</translation>
+        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 AMS.</source>
+        <translation>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 AMS.</translation>
     </message>
 </context>
 <context>
@@ -3958,6 +3938,10 @@ https://www.transifex.com/mangaka-project/mangaka-project-translations</translat
         <translation>Distributed under the MIT software license, see the accompanying file COPYING or &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</translation>
     </message>
     <message>
+        <source>Enable spork administration functionality with the appropriate private key.</source>
+        <translation>Enable spork administration functionality with the appropriate private key.</translation>
+    </message>
+    <message>
         <source>Enable swifttx, show confirmations for locked transactions (bool, default: %s)</source>
         <translation>Enable swifttx, show confirmations for locked transactions (bool, default: %s)</translation>
     </message>
@@ -3990,12 +3974,12 @@ https://www.transifex.com/mangaka-project/mangaka-project-translations</translat
         <translation>Execute command when the best block changes (%s in cmd is replaced by block hash)</translation>
     </message>
     <message>
-        <source>Fees (in MANG/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Fees (in MANG/Kb) smaller than this are considered zero fee for relaying (default: %s)</translation>
+        <source>Fees (in AMS/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Fees (in AMS/Kb) smaller than this are considered zero fee for relaying (default: %s)</translation>
     </message>
     <message>
-        <source>Fees (in MANG/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Fees (in MANG/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</translation>
+        <source>Fees (in AMS/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Fees (in AMS/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -4020,6 +4004,10 @@ https://www.transifex.com/mangaka-project/mangaka-project-translations</translat
     <message>
         <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s' (must be at least the minrelay fee of %s to prevent stuck transactions)</source>
         <translation>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s' (must be at least the minrelay fee of %s to prevent stuck transactions)</translation>
+    </message>
+    <message>
+        <source>Keep the specified amount available for spending at all times (default: 0)</source>
+        <translation>Keep the specified amount available for spending at all times (default: 0)</translation>
     </message>
     <message>
         <source>Log transaction priority and fee per kB when mining blocks (default: %u)</source>
@@ -4082,12 +4070,12 @@ https://www.transifex.com/mangaka-project/mangaka-project-translations</translat
         <translation>Show N confirmations for a successfully locked transaction (0-9999, default: %u)</translation>
     </message>
     <message>
-        <source>SwiftTX requires inputs with at least 6 confirmations, you might need to wait a few minutes and try again.</source>
-        <translation>SwiftTX requires inputs with at least 6 confirmations, you might need to wait a few minutes and try again.</translation>
+        <source>Support filtering of blocks and transaction with bloom filters (default: %u)</source>
+        <translation>Support filtering of blocks and transaction with bloom filters (default: %u)</translation>
     </message>
     <message>
-        <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
-        <translation>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</translation>
+        <source>SwiftTX requires inputs with at least 6 confirmations, you might need to wait a few minutes and try again.</source>
+        <translation>SwiftTX requires inputs with at least 6 confirmations, you might need to wait a few minutes and try again.</translation>
     </message>
     <message>
         <source>This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit &lt;https://www.openssl.org/&gt; and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard.</source>
@@ -4126,12 +4114,12 @@ for example: alertnotify=echo %%s | mail -s "Mangaka Alert" admin@foo.com
         <translation>Unable to locate enough Obfuscation denominated funds for this transaction.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 MANG.</source>
-        <translation>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 MANG.</translation>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 AMS.</source>
+        <translation>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 AMS.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 MANG.</source>
-        <translation>Unable to locate enough funds for this transaction that are not equal 10000 MANG.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 AMS.</source>
+        <translation>Unable to locate enough funds for this transaction that are not equal 10000 AMS.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -4178,8 +4166,8 @@ for example: alertnotify=echo %%s | mail -s "Mangaka Alert" admin@foo.com
         <translation>You must specify a masternodeprivkey in the configuration. Please see documentation for help.</translation>
     </message>
     <message>
-        <source>(9711 could be used only on mainnet)</source>
-        <translation>(9711 could be used only on mainnet)</translation>
+        <source>(50020 could be used only on mainnet)</source>
+        <translation>(50020 could be used only on mainnet)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -4190,15 +4178,8 @@ for example: alertnotify=echo %%s | mail -s "Mangaka Alert" admin@foo.com
         <translation>(default: 1)</translation>
     </message>
     <message>
-        <source>(must be 9711 for mainnet)</source>
-        <translation>(must be 9711 for mainnet)</translation>
-
-    </message>
-    <message>
-        <source>&lt;category&gt; can be:
-</source>
-        <translation>&lt;category&gt; can be:
-</translation>
+        <source>(must be 50020 for mainnet)</source>
+        <translation>(must be 50020 for mainnet)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>
@@ -4425,8 +4406,8 @@ for example: alertnotify=echo %%s | mail -s "Mangaka Alert" admin@foo.com
         <translation>Failed to read block</translation>
     </message>
     <message>
-        <source>Fee (in MANG/kB) to add to transactions you send (default: %s)</source>
-        <translation>Fee (in MANG/kB) to add to transactions you send (default: %s)</translation>
+        <source>Fee (in AMS/kB) to add to transactions you send (default: %s)</source>
+        <translation>Fee (in AMS/kB) to add to transactions you send (default: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
@@ -4549,8 +4530,56 @@ for example: alertnotify=echo %%s | mail -s "Mangaka Alert" admin@foo.com
         <translation>Invalid script detected.</translation>
     </message>
     <message>
-        <source>Keep N MANG anonymized (default: %u)</source>
-        <translation>Keep N MANG anonymized (default: %u)</translation>
+        <source>This is a pre-release test build - use at your own risk - do not use for staking or merchant applications!</source>
+        <translation>This is a pre-release test build - use at your own risk - do not use for staking or merchant applications!</translation>
+    </message>
+    <message>
+        <source>&lt;category&gt; can be:</source>
+        <translation>&lt;category&gt; can be:</translation>
+    </message>
+    <message>
+        <source>Attempt to force blockchain corruption recovery</source>
+        <translation>Attempt to force blockchain corruption recovery</translation>
+    </message>
+    <message>
+        <source>Display the stake modifier calculations in the debug.log file.</source>
+        <translation>Display the stake modifier calculations in the debug.log file.</translation>
+    </message>
+    <message>
+        <source>Display verbose coin stake messages in the debug.log file.</source>
+        <translation>Display verbose coin stake messages in the debug.log file.</translation>
+    </message>
+    <message>
+        <source>Enable publish hash block in &lt;address&gt;</source>
+        <translation>Enable publish hash block in &lt;address&gt;</translation>
+    </message>
+    <message>
+        <source>Enable publish hash transaction (locked via SwiftTX) in &lt;address&gt;</source>
+        <translation>Enable publish hash transaction (locked via SwiftTX) in &lt;address&gt;</translation>
+    </message>
+    <message>
+        <source>Enable publish hash transaction in &lt;address&gt;</source>
+        <translation>Enable publish hash transaction in &lt;address&gt;</translation>
+    </message>
+    <message>
+        <source>Enable publish raw block in &lt;address&gt;</source>
+        <translation>Enable publish raw block in &lt;address&gt;</translation>
+    </message>
+    <message>
+        <source>Enable publish raw transaction (locked via SwiftTX) in &lt;address&gt;</source>
+        <translation>Enable publish raw transaction (locked via SwiftTX) in &lt;address&gt;</translation>
+    </message>
+    <message>
+        <source>Enable publish raw transaction in &lt;address&gt;</source>
+        <translation>Enable publish raw transaction in &lt;address&gt;</translation>
+    </message>
+    <message>
+        <source>Enable staking functionality (0-1, default: %u)</source>
+        <translation>Enable staking functionality (0-1, default: %u)</translation>
+    </message>
+    <message>
+        <source>Keep N AMS anonymized (default: %u)</source>
+        <translation>Keep N AMS anonymized (default: %u)</translation>
     </message>
     <message>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>
@@ -4729,6 +4758,10 @@ for example: alertnotify=echo %%s | mail -s "Mangaka Alert" admin@foo.com
         <translation>Prepend debug output with timestamp (default: %u)</translation>
     </message>
     <message>
+        <source>Print version and exit</source>
+        <translation>Print version and exit</translation>
+    </message>
+    <message>
         <source>RPC SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
         <translation>RPC SSL options: (see the Bitcoin Wiki for SSL setup instructions)</translation>
     </message>
@@ -4883,6 +4916,10 @@ for example: alertnotify=echo %%s | mail -s "Mangaka Alert" admin@foo.com
     <message>
         <source>Spend unconfirmed change when sending transactions (default: %u)</source>
         <translation>Spend unconfirmed change when sending transactions (default: %u)</translation>
+    </message>
+    <message>
+        <source>Staking options:</source>
+        <translation>Staking options:</translation>
     </message>
     <message>
         <source>Stop running after importing blocks from disk (default: %u)</source>
@@ -5095,6 +5132,10 @@ for example: alertnotify=echo %%s | mail -s "Mangaka Alert" admin@foo.com
     <message>
         <source>Zapping all transactions from wallet...</source>
         <translation>Zapping all transactions from wallet...</translation>
+    </message>
+    <message>
+        <source>ZeroMQ notification options:</source>
+        <translation>ZeroMQ notification options:</translation>
     </message>
     <message>
         <source>on startup</source>

@@ -1,6 +1,7 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
+// Copyright (c) 2015-2017 The PIVX developers
 // Copyright (c) 2015-2017 The Mangaka developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -193,7 +194,7 @@ Value setgenerate(const Array& params, bool fHelp)
         unsigned int nExtraNonce = 0;
         Array blockHashes;
         while (nHeight < nHeightEnd) {
-            auto_ptr<CBlockTemplate> pblocktemplate(CreateNewBlockWithKey(reservekey, pwalletMain, false));
+            unique_ptr<CBlockTemplate> pblocktemplate(CreateNewBlockWithKey(reservekey, pwalletMain, false));
             if (!pblocktemplate.get())
                 throw JSONRPCError(RPC_INTERNAL_ERROR, "Wallet keypool empty");
             CBlock* pblock = &pblocktemplate->block;
@@ -448,8 +449,8 @@ Value getblocktemplate(const Array& params, bool fHelp)
     if (vNodes.empty())
         throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Mangaka is not connected!");
 
-    if (IsInitialBlockDownload())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Mangaka is downloading blocks...");
+   // if (IsInitialBlockDownload())
+    //    throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Mangaka is downloading blocks...");
 
     static unsigned int nTransactionsUpdatedLast;
 
@@ -520,13 +521,13 @@ Value getblocktemplate(const Array& params, bool fHelp)
             delete pblocktemplate;
             pblocktemplate = NULL;
         }
-
+		
 		/* TODO-- too poor as per performance, but only way */
-
+		
 		CPubKey pubkey;
 		if (!pMiningKey->GetReservedKey(pubkey))
-			return NULL;
-
+			return Value::null;
+		
         CScript scriptDummy = CScript() << ToByteVector(pubkey) << OP_CHECKSIG;
         pblocktemplate = CreateNewBlock(scriptDummy, pwalletMain, false);
         if (!pblocktemplate)
@@ -535,8 +536,8 @@ Value getblocktemplate(const Array& params, bool fHelp)
         // Need to update only after we know CreateNewBlock succeeded
         pindexPrev = pindexPrevNew;
     }
-
-
+	
+	
     CBlock* pblock = &pblocktemplate->block; // pointer for convenience
 
     // Update nTime
@@ -574,7 +575,7 @@ Value getblocktemplate(const Array& params, bool fHelp)
 
         transactions.push_back(entry);
     }
-
+	
 	Array coinbasetxn;
     map<uint256, int64_t> setTxIndex1;
     int j = 0;
@@ -634,33 +635,27 @@ Value getblocktemplate(const Array& params, bool fHelp)
     result.push_back(Pair("mintime", (int64_t)pindexPrev->GetMedianTimePast() + 1));
     result.push_back(Pair("mutable", aMutable));
     result.push_back(Pair("noncerange", "00000000ffffffff"));
-    result.push_back(Pair("sigoplimit", (int64_t)MAX_BLOCK_SIGOPS));
-    result.push_back(Pair("sizelimit", (int64_t)MAX_BLOCK_SIZE));
+//    result.push_back(Pair("sigoplimit", (int64_t)MAX_BLOCK_SIGOPS));
+//    result.push_back(Pair("sizelimit", (int64_t)MAX_BLOCK_SIZE));
     result.push_back(Pair("curtime", pblock->GetBlockTime()));
     result.push_back(Pair("bits", strprintf("%08x", pblock->nBits)));
     result.push_back(Pair("height", (int64_t)(pindexPrev->nHeight + 1)));
     result.push_back(Pair("votes", aVotes));
 
 
-    Object masternodeObj;
     if (pblock->payee != CScript()) {
         CTxDestination address1;
         ExtractDestination(pblock->payee, address1);
         CBitcoinAddress address2(address1);
         result.push_back(Pair("payee", address2.ToString().c_str()));
         result.push_back(Pair("payee_amount", (int64_t)pblock->vtx[0].vout[1].nValue));
-        masternodeObj.push_back(Pair("payee", address2.ToString().c_str()));
-        masternodeObj.push_back(Pair("amount", (int64_t)pblock->vtx[0].vout[1].nValue));
     } else {
         result.push_back(Pair("payee", ""));
         result.push_back(Pair("payee_amount", ""));
     }
 
-    result.push_back(Pair("masternode", masternodeObj));
     result.push_back(Pair("masternode_payments", pblock->nTime > Params().StartMasternodePayments()));
     result.push_back(Pair("enforce_masternode_payments", true));
-    result.push_back(Pair("masternode_payments_enforced", true));
-    result.push_back(Pair("superblocks_enabled", false));
 
     return result;
 }

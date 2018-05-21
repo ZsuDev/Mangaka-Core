@@ -2,6 +2,12 @@ Contents
 ===========
 This directory contains tools for developers working on this repository.
 
+check-doc.py
+============
+
+Check if all command line args are documented. The return value indicates the
+number of undocumented args.
+
 github-merge.py
 ===============
 
@@ -12,7 +18,7 @@ For example:
   ./github-merge.py 3077
 
 (in any git repository) will help you merge pull request #3077 for the
-Mangaka-Project/Mangaka repository.
+mangakacoin/Mangaka-Core repository.
 
 What it does:
 * Fetch master and the pull request.
@@ -32,7 +38,7 @@ Setup
 ---------
 Configuring the github-merge tool for the Mangaka repository is done in the following way:
 
-    git config githubmerge.repository Mangaka-Project/Mangaka
+    git config githubmerge.repository mangakacoin/Mangaka-Core
     git config githubmerge.testcmd "make -j4 check" (adapt to whatever you want to use for testing)
     git config --global user.signingkey mykeyid (if you want to GPG sign)
 

@@ -1,5 +1,6 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
+// Copyright (c) 2015-2017 The PIVX developers
 // Copyright (c) 2015-2017 The Mangaka developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -19,18 +20,18 @@ BitcoinUnits::BitcoinUnits(QObject* parent) : QAbstractListModel(parent),
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(MANG);
-    unitlist.append(mMANG);
-    unitlist.append(uMANG);
+    unitlist.append(AMS);
+    unitlist.append(mAMS);
+    unitlist.append(uAMS);
     return unitlist;
 }
 
 bool BitcoinUnits::valid(int unit)
 {
     switch (unit) {
-    case MANG:
-    case mMANG:
-    case uMANG:
+    case AMS:
+    case mAMS:
+    case uAMS:
         return true;
     default:
         return false;
@@ -40,11 +41,11 @@ bool BitcoinUnits::valid(int unit)
 QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
-    case MANG:
+    case AMS:
         return QString("mangaka");
-    case mMANG:
+    case mAMS:
         return QString("mmangaka");
-    case uMANG:
+    case uAMS:
         return QString::fromUtf8("umangaka");
     default:
         return QString("???");
@@ -55,23 +56,23 @@ QString BitcoinUnits::name(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case MANG:
-            return QString("MANG");
-        case mMANG:
-            return QString("mMANG");
-        case uMANG:
-            return QString::fromUtf8("μMANG");
+        case AMS:
+            return QString("AMS");
+        case mAMS:
+            return QString("mAMS");
+        case uAMS:
+            return QString::fromUtf8("μAMS");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case MANG:
-            return QString("tMANG");
-        case mMANG:
-            return QString("mtMANG");
-        case uMANG:
-            return QString::fromUtf8("μtMANG");
+        case AMS:
+            return QString("tAMS");
+        case mAMS:
+            return QString("mtAMS");
+        case uAMS:
+            return QString::fromUtf8("μtAMS");
         default:
             return QString("???");
         }
@@ -82,23 +83,23 @@ QString BitcoinUnits::description(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case MANG:
-            return QString("MANG");
-        case mMANG:
-            return QString("Milli-MANG (1 / 1" THIN_SP_UTF8 "000)");
-        case uMANG:
-            return QString("Micro-MANG (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case AMS:
+            return QString("AMS");
+        case mAMS:
+            return QString("Milli-AMS (1 / 1" THIN_SP_UTF8 "000)");
+        case uAMS:
+            return QString("Micro-AMS (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case MANG:
-            return QString("TestMANGs");
-        case mMANG:
-            return QString("Milli-TestMANG (1 / 1" THIN_SP_UTF8 "000)");
-        case uMANG:
-            return QString("Micro-TestMANG (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case AMS:
+            return QString("TestAMSs");
+        case mAMS:
+            return QString("Milli-TestAMS (1 / 1" THIN_SP_UTF8 "000)");
+        case uAMS:
+            return QString("Micro-TestAMS (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
@@ -108,11 +109,11 @@ QString BitcoinUnits::description(int unit)
 qint64 BitcoinUnits::factor(int unit)
 {
     switch (unit) {
-    case MANG:
+    case AMS:
         return 100000000;
-    case mMANG:
+    case mAMS:
         return 100000;
-    case uMANG:
+    case uAMS:
         return 100;
     default:
         return 100000000;
@@ -122,11 +123,11 @@ qint64 BitcoinUnits::factor(int unit)
 int BitcoinUnits::decimals(int unit)
 {
     switch (unit) {
-    case MANG:
+    case AMS:
         return 8;
-    case mMANG:
+    case mAMS:
         return 5;
-    case uMANG:
+    case uAMS:
         return 2;
     default:
         return 0;
@@ -282,5 +283,5 @@ QVariant BitcoinUnits::data(const QModelIndex& index, int role) const
 
 CAmount BitcoinUnits::maxMoney()
 {
-    return MAX_MONEY;
+    return Params().MaxMoneyOut();
 }

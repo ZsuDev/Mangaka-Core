@@ -1,17 +1,30 @@
 <!DOCTYPE RCC><RCC version="1.0">
     <qresource prefix="/translations">
+        <file alias="bg">locale/mangaka_bg.qm</file>
         <file alias="ca">locale/mangaka_ca.qm</file>
+        <file alias="cs">locale/mangaka_cs.qm</file>
         <file alias="da">locale/mangaka_da.qm</file>
         <file alias="de">locale/mangaka_de.qm</file>
         <file alias="en">locale/mangaka_en.qm</file>
         <file alias="en_US">locale/mangaka_en_US.qm</file>
         <file alias="es">locale/mangaka_es.qm</file>
+        <file alias="fi">locale/mangaka_fi.qm</file>
         <file alias="fr_FR">locale/mangaka_fr_FR.qm</file>
+        <file alias="hr">locale/mangaka_hr.qm</file>
         <file alias="it">locale/mangaka_it.qm</file>
         <file alias="ja">locale/mangaka_ja.qm</file>
+        <file alias="ko_KR">locale/mangaka_ko_KR.qm</file>
+        <file alias="nl">locale/mangaka_nl.qm</file>
+        <file alias="pl">locale/mangaka_pl.qm</file>
         <file alias="pt">locale/mangaka_pt.qm</file>
+        <file alias="pt_BR">locale/mangaka_pt_BR.qm</file>
         <file alias="ro_RO">locale/mangaka_ro_RO.qm</file>
         <file alias="ru">locale/mangaka_ru.qm</file>
+        <file alias="sk">locale/mangaka_sk.qm</file>
+        <file alias="sv">locale/mangaka_sv.qm</file>
+        <file alias="tr">locale/mangaka_tr.qm</file>
+        <file alias="uk">locale/mangaka_uk.qm</file>
+        <file alias="zh_CN">locale/mangaka_zh_CN.qm</file>
         <file alias="zh_TW">locale/mangaka_zh_TW.qm</file>
     </qresource>
 </RCC>
