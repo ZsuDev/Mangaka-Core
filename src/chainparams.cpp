@@ -108,12 +108,12 @@ public:
         nMaturity = 50;
 	      nMaxMoneyOut = 10000000000 * COIN;
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 52560;
+        nLastPOWBlock = 2000;
         nModifierUpdateBlock = 1;
 
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
-        nZerocoinStartTime = 1522423297; // Friday, March 30, 2018 5:21:37 PM GMT+02:00 DST
-	      nZerocoinStartHeight = 263537;
+        nZerocoinStartTime = 1526911648; // Friday, March 30, 2018 5:21:37 PM GMT+02:00 DST
+	      nZerocoinStartHeight = 10000;
 
 	      const char* pszTimestamp = "Magana Pro";
 
